@@ -245,6 +245,7 @@ class RowsInsertionTests: XCTestCase {
 
     private func movingRows(formInit: () -> Form, sectionAppend: (Section, BaseRow) -> Void) {
         var form = formInit()
+
         var tmp = form[0].remove(at: 0)
         XCTAssertNil(tmp.section)
         sectionAppend(form[0], tmp)
